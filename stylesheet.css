@@ -1,0 +1,224 @@
+/*  */
+
+body{
+    margin: 0px;
+    height: 100vh;
+    background: linear-gradient(-45deg, #b38dfa, #8ad9df, #b4ff76, #f093d5);
+    background-size: 400% 400%;
+    animation: trippyBG 15s ease infinite;
+
+}
+
+/* home page css */
+h1{
+    font-size: 2.5rem;
+    color: #4b3e83;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Boldonse", system-ui;;
+}
+
+p{
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    font-family: "Play", sans-serif; ;
+}
+
+.center-img{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.center-img img{
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow:  0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* about css */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-img{
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); ;
+}
+
+.about-text{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+
+/* nav bar */
+.navbar a{
+    color: #333;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    animation: slideDown 1s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.navbar a:hover{
+background-color: hsl(0, 0%, 20%);
+
+}
+
+.navbar li{
+    float: left;
+}
+
+.navbar li:first-child a{
+    font-size: 20px;
+    color: rgb(29, 14, 2);
+}
+
+.navbar ul{
+
+    list-style: none;
+    background-color: hsl(192, 79%, 64%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+/* drawing gallery */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container{
+    width: 200px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    overflow: visible;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* image resize on click  for drawings page*/
+.image-popup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000
+}
+
+.popup-content{
+    /* centers the popup box */
+    position: relative;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
+
+#popup-img{
+    /* image inside the pop up box */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.popup-close{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+     font-weight: bold;
+}
+
+
+.digital-text {
+    font-family: "Rowdies", sans-serif;
+}
+
+
+@media(max-width:600px){
+    .navbar ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main h1{
+        font-size: 1.5rem;
+    }
+
+    main p{
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+}
+
+
+
+/* animations */
+@keyframes trippyBG{
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+@keyframes slideDown{
+    0%{
+        transform:translateY(-100%);
+        opacity:0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
